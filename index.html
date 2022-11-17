@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
     <title>Login</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/media-query.css">
 </head>
 
 <body>
@@ -17,19 +17,22 @@
         </div>
         <div id="form">
             <h1>Login</h1>
-            <p>Seja bem-vindo(a) novamente. Faça login para acessar sua conta e poder fazer as configurações no seu
-                ambiente.</p>
-            <form action="data_base.php" method="get">
+            <p>Seja bem-vindo(a) novamente. Faça login para acessar sua conta.</p>
+            <form action="login.php" method="post" autocomplete="on">
                 <div class="field">
-                    <span class="material-icons" id="person-icon">person</span>
-                    <input type="email" name="email" id="iemail" placeholder="seu e-mail" autocomplete="on" required>
+                    <label for="iemail">
+                        <span class="material-icons">person</span>
+                    </label>
+                    <input type="email" name="email" id="iemail" placeholder="exemplo@email.com" maxlength="30">
                 </div>
                 <div class="field">
-                    <span class="material-icons" id="vpn_key-icon">vpn_key</span>
-                    <input type="password" name="password" id="ipassword" placeholder="sua senha" autocomplete="off" required>
+                    <label for="ipassword">
+                        <span class="material-icons">vpn_key</span>
+                    </label>
+                    <input type="password" name="password" id="ipassword" placeholder="senha" minlength="8" maxlength="20" required>
                 </div>
                 <input type="submit" value="Entrar">
-                <a href="esqueci.html">Esqueci a senha
+                <a href="forgot-password.html" target="_blank" rel="next">Esqueci a senha
                     <span class="material-icons" id="email-icon">email</span>
                 </a>
                 
